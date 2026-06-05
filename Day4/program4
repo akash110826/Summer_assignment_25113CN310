@@ -1,0 +1,37 @@
+//Write a program to Print Armstrong numbers in a range.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int min  ,max,  j , temp , count =0 , rem  , found =0 , orignal;
+    printf("Enter the min and max of range ");
+    scanf("%d%d",&min, &max);
+     for(j= min ; j<=max; j++)
+     {
+        double power = 0.0;
+        count = 0;
+        orignal  = j;
+        temp = j;
+        while (temp!=0)
+        {
+           temp = temp/10;
+           count++;
+        }
+        temp = j;
+        while (temp!=0)
+        {  
+            rem = temp%10;
+           power = power + pow(rem,count);
+           temp = temp/10;
+        }
+         if(orignal == (int)power)
+         {
+        printf("%d ", j);  
+        found ++;
+         }
+     }   
+     if (found ==0)
+     printf("no armstrong number found");
+    
+    return 0; 
+}
