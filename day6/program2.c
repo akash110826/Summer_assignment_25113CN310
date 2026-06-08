@@ -1,0 +1,21 @@
+// Write a program to Convert binary to decimal. 
+#include<stdio.h>
+int main()
+{
+    int num , n , i = 0 , decimal = 0 , rem  ,base = 1;
+    printf("Enter the number");
+    scanf("%d",&num);
+    n = num;
+    while (n>0)
+    {
+       rem = n%10;
+       decimal = decimal +  rem * base;
+       base = base*2 ;
+       n = n/10; 
+       i++;
+    }
+    printf("decimal of %d is %d ",num , decimal);
+     
+       return 0;
+}
+

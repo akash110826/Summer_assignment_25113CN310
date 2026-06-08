@@ -1,0 +1,19 @@
+// Write a program to Recursive Fibonacci. 
+#include<stdio.h>
+int fib(int n)
+{
+    int result;
+    if(n ==0) {return 0;}
+    else if(n == 1){return 1;}
+    else
+    return     fib(n-1 ) + fib(n-2) ;
+}
+int main()
+{
+    int num  , result;
+    printf("Enter the number");
+    scanf("%d",&num);
+    result  = fib(num);
+    printf("%d ", result);
+    return 0;
+}
