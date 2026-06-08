@@ -1,0 +1,27 @@
+// Write a program to Print prime numbers in a range.
+#include<stdio.h>
+int main()
+{
+    int n, i,j,p, temp ;
+    printf("Enter the range");
+    scanf("%d",&n);
+    for(i=2;i<=n;i++)
+    {
+      temp=0;
+        for(j=2 ;j<i; j++ )
+        {
+          if( i %j==0) 
+          {
+            temp++;
+            break;
+          }
+        }
+            if(temp==0)
+            {
+                printf(" %d ",i);
+            }
+            
+        
+    }
+ return 0;
+} 

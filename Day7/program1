@@ -1,0 +1,19 @@
+// Write a program to Recursive factorial.
+#include<stdio.h>
+int factorial( n){
+int fact;
+  if(n==1){
+    return 1;
+  }
+  else
+  return  n * factorial(n-1) ;
+}
+int main()
+{
+    int num , result ;
+    printf("Enter the number");
+    scanf("%d",&num);
+    result = factorial(num);
+    printf("THE factorial of %d is %d " ,num , result);
+    return 0 ;
+}
